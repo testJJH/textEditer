@@ -40,6 +40,7 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.형광펜ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.형광펜삭제ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,9 +121,10 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.형광펜ToolStripMenuItem});
+            this.형광펜ToolStripMenuItem,
+            this.형광펜삭제ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 42);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(301, 124);
             // 
             // 형광펜ToolStripMenuItem
             // 
@@ -130,6 +132,13 @@
             this.형광펜ToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
             this.형광펜ToolStripMenuItem.Text = "형광펜";
             this.형광펜ToolStripMenuItem.Click += new System.EventHandler(this.형광펜ToolStripMenuItem_Click);
+            // 
+            // 형광펜삭제ToolStripMenuItem
+            // 
+            this.형광펜삭제ToolStripMenuItem.Name = "형광펜삭제ToolStripMenuItem";
+            this.형광펜삭제ToolStripMenuItem.Size = new System.Drawing.Size(300, 38);
+            this.형광펜삭제ToolStripMenuItem.Text = "형광펜 삭제";
+            this.형광펜삭제ToolStripMenuItem.Click += new System.EventHandler(this.형광펜삭제ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -160,6 +169,7 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 형광펜ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 형광펜삭제ToolStripMenuItem;
     }
 }
 
