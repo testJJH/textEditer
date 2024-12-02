@@ -16,5 +16,12 @@ namespace textEditer
         {
             InitializeComponent();
         }
+
+        private void 글꼴ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            textBox1.Font = fontDialog1.Font;
+            textBox1.ForeColor = fontDialog1.Color;
+        }
     }
 }

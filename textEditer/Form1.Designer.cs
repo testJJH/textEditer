@@ -37,17 +37,23 @@
             this.복사ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.붙여넣기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.속성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
+=======
+            this.글꼴ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+>>>>>>> cf3fd6c (commit10 : add FontChange)
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(0, 40);
+            this.textBox1.Font = new System.Drawing.Font("굴림", 12F);
+            this.textBox1.Location = new System.Drawing.Point(0, 48);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(1407, 780);
+            this.textBox1.Size = new System.Drawing.Size(1407, 772);
             this.textBox1.TabIndex = 0;
             // 
             // menuStrip1
@@ -60,7 +66,7 @@
             this.속성ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1407, 40);
+            this.menuStrip1.Size = new System.Drawing.Size(1407, 48);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -70,7 +76,7 @@
             this.저장ToolStripMenuItem,
             this.열기ToolStripMenuItem});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
-            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.파일ToolStripMenuItem.Text = "파일";
             // 
             // 저장ToolStripMenuItem
@@ -91,7 +97,7 @@
             this.복사ToolStripMenuItem,
             this.붙여넣기ToolStripMenuItem});
             this.편집ToolStripMenuItem.Name = "편집ToolStripMenuItem";
-            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
+            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.편집ToolStripMenuItem.Text = "편집";
             // 
             // 복사ToolStripMenuItem
@@ -108,9 +114,24 @@
             // 
             // 속성ToolStripMenuItem
             // 
+<<<<<<< HEAD
             this.속성ToolStripMenuItem.Name = "속성ToolStripMenuItem";
             this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
             this.속성ToolStripMenuItem.Text = "속성";
+=======
+            this.속성ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.글꼴ToolStripMenuItem});
+            this.속성ToolStripMenuItem.Name = "속성ToolStripMenuItem";
+            this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
+            this.속성ToolStripMenuItem.Text = "속성";
+            // 
+            // 글꼴ToolStripMenuItem
+            // 
+            this.글꼴ToolStripMenuItem.Name = "글꼴ToolStripMenuItem";
+            this.글꼴ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.글꼴ToolStripMenuItem.Text = "글꼴";
+            this.글꼴ToolStripMenuItem.Click += new System.EventHandler(this.글꼴ToolStripMenuItem_Click);
+>>>>>>> cf3fd6c (commit10 : add FontChange)
             // 
             // Form1
             // 
@@ -139,6 +160,11 @@
         private System.Windows.Forms.ToolStripMenuItem 복사ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 붙여넣기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 속성ToolStripMenuItem;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.ToolStripMenuItem 글꼴ToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
+>>>>>>> cf3fd6c (commit10 : add FontChange)
     }
 }
 
