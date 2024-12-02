@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -144,6 +145,27 @@ namespace textEditer
         private void button3_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
+        }
+
+        private void 프린트ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrinterSettings printer = new PrinterSettings();
+            PrintDocument pd = new PrintDocument();
+            printDialog1.PrinterSettings = printer;
+            printDialog1.Document = pd;
+            pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
+            DialogResult result = printDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                pd.Print();
+            }
+        }
+
+        private void pd_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            string text = textBox1.Text;
+            Font printFont = textBox1.Font;
+            e.Graphics.DrawString(text, printFont, Brushes.Black, 10, 10);
         }
     }
 }

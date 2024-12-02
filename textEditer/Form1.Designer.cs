@@ -34,17 +34,20 @@
             this.열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.복사ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.바꾸기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.바꾸기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.프린트ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +70,9 @@
             // 
             this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.저장ToolStripMenuItem,
-            this.열기ToolStripMenuItem});
+            this.열기ToolStripMenuItem,
+            this.nToolStripMenuItem,
+            this.프린트ToolStripMenuItem});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.파일ToolStripMenuItem.Text = "파일";
@@ -75,13 +80,13 @@
             // 저장ToolStripMenuItem
             // 
             this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
-            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(195, 44);
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.저장ToolStripMenuItem.Text = "저장";
             // 
             // 열기ToolStripMenuItem
             // 
             this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
-            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(195, 44);
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.열기ToolStripMenuItem.Text = "열기";
             // 
             // 편집ToolStripMenuItem
@@ -99,6 +104,13 @@
             this.복사ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.복사ToolStripMenuItem.Text = "찾기";
             this.복사ToolStripMenuItem.Click += new System.EventHandler(this.찾기ToolStripMenuItem_Click);
+            // 
+            // 바꾸기ToolStripMenuItem
+            // 
+            this.바꾸기ToolStripMenuItem.Name = "바꾸기ToolStripMenuItem";
+            this.바꾸기ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.바꾸기ToolStripMenuItem.Text = "바꾸기";
+            this.바꾸기ToolStripMenuItem.Click += new System.EventHandler(this.바꾸기ToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
@@ -120,13 +132,15 @@
             this.panel1.TabIndex = 3;
             this.panel1.Visible = false;
             // 
-            // textBox1
+            // button2
             // 
-            this.textBox1.Font = new System.Drawing.Font("굴림", 10F);
-            this.textBox1.Location = new System.Drawing.Point(14, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 38);
-            this.textBox1.TabIndex = 0;
+            this.button2.Location = new System.Drawing.Point(478, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 38);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -138,22 +152,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // textBox1
             // 
-            this.button2.Location = new System.Drawing.Point(478, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // 바꾸기ToolStripMenuItem
-            // 
-            this.바꾸기ToolStripMenuItem.Name = "바꾸기ToolStripMenuItem";
-            this.바꾸기ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
-            this.바꾸기ToolStripMenuItem.Text = "바꾸기";
-            this.바꾸기ToolStripMenuItem.Click += new System.EventHandler(this.바꾸기ToolStripMenuItem_Click);
+            this.textBox1.Font = new System.Drawing.Font("굴림", 10F);
+            this.textBox1.Location = new System.Drawing.Point(14, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(367, 38);
+            this.textBox1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -166,6 +171,14 @@
             this.panel2.Size = new System.Drawing.Size(550, 118);
             this.panel2.TabIndex = 4;
             this.panel2.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("굴림", 10F);
+            this.textBox3.Location = new System.Drawing.Point(14, 67);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(367, 38);
+            this.textBox3.TabIndex = 3;
             // 
             // button3
             // 
@@ -195,13 +208,21 @@
             this.textBox2.Size = new System.Drawing.Size(367, 38);
             this.textBox2.TabIndex = 0;
             // 
-            // textBox3
+            // nToolStripMenuItem
             // 
-            this.textBox3.Font = new System.Drawing.Font("굴림", 10F);
-            this.textBox3.Location = new System.Drawing.Point(14, 67);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(367, 38);
-            this.textBox3.TabIndex = 3;
+            this.nToolStripMenuItem.Name = "nToolStripMenuItem";
+            this.nToolStripMenuItem.Size = new System.Drawing.Size(356, 6);
+            // 
+            // 프린트ToolStripMenuItem
+            // 
+            this.프린트ToolStripMenuItem.Name = "프린트ToolStripMenuItem";
+            this.프린트ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.프린트ToolStripMenuItem.Text = "프린트";
+            this.프린트ToolStripMenuItem.Click += new System.EventHandler(this.프린트ToolStripMenuItem_Click);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // Form1
             // 
@@ -243,6 +264,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ToolStripSeparator nToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 프린트ToolStripMenuItem;
+        private System.Windows.Forms.PrintDialog printDialog1;
     }
 }
 
