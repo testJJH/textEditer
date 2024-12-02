@@ -43,6 +43,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.CursorPoint = new System.Windows.Forms.ToolStripStatusLabel();
             this.TextLength = new System.Windows.Forms.ToolStripStatusLabel();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.속성ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1407, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1403, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,20 +69,22 @@
             this.저장ToolStripMenuItem,
             this.열기ToolStripMenuItem});
             this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
-            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
             this.파일ToolStripMenuItem.Text = "파일";
             // 
             // 저장ToolStripMenuItem
             // 
             this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
-            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(195, 44);
             this.저장ToolStripMenuItem.Text = "저장";
+            this.저장ToolStripMenuItem.Click += new System.EventHandler(this.저장ToolStripMenuItem_Click);
             // 
             // 열기ToolStripMenuItem
             // 
             this.열기ToolStripMenuItem.Name = "열기ToolStripMenuItem";
-            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.열기ToolStripMenuItem.Size = new System.Drawing.Size(195, 44);
             this.열기ToolStripMenuItem.Text = "열기";
+            this.열기ToolStripMenuItem.Click += new System.EventHandler(this.열기ToolStripMenuItem_Click);
             // 
             // 편집ToolStripMenuItem
             // 
@@ -88,19 +92,19 @@
             this.복사ToolStripMenuItem,
             this.붙여넣기ToolStripMenuItem});
             this.편집ToolStripMenuItem.Name = "편집ToolStripMenuItem";
-            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
+            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
             this.편집ToolStripMenuItem.Text = "편집";
             // 
             // 복사ToolStripMenuItem
             // 
             this.복사ToolStripMenuItem.Name = "복사ToolStripMenuItem";
-            this.복사ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.복사ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.복사ToolStripMenuItem.Text = "복사";
             // 
             // 붙여넣기ToolStripMenuItem
             // 
             this.붙여넣기ToolStripMenuItem.Name = "붙여넣기ToolStripMenuItem";
-            this.붙여넣기ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.붙여넣기ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.붙여넣기ToolStripMenuItem.Text = "붙여넣기";
             // 
             // 속성ToolStripMenuItem
@@ -109,29 +113,29 @@
             this.글꼴ToolStripMenuItem,
             this.다크모드ToolStripMenuItem});
             this.속성ToolStripMenuItem.Name = "속성ToolStripMenuItem";
-            this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
+            this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
             this.속성ToolStripMenuItem.Text = "속성";
             // 
             // 글꼴ToolStripMenuItem
             // 
             this.글꼴ToolStripMenuItem.Name = "글꼴ToolStripMenuItem";
-            this.글꼴ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.글꼴ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.글꼴ToolStripMenuItem.Text = "글꼴";
             this.글꼴ToolStripMenuItem.Click += new System.EventHandler(this.글꼴ToolStripMenuItem_Click);
             // 
             // 다크모드ToolStripMenuItem
             // 
             this.다크모드ToolStripMenuItem.Name = "다크모드ToolStripMenuItem";
-            this.다크모드ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.다크모드ToolStripMenuItem.Size = new System.Drawing.Size(243, 44);
             this.다크모드ToolStripMenuItem.Text = "다크모드";
             this.다크모드ToolStripMenuItem.Click += new System.EventHandler(this.다크모드ToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 42);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 40);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1407, 778);
+            this.richTextBox1.Size = new System.Drawing.Size(1403, 762);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             this.richTextBox1.SelectionChanged += new System.EventHandler(this.richTextBox1_SelectionChanged);
@@ -143,9 +147,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CursorPoint,
             this.TextLength});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 778);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 760);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1407, 42);
+            this.statusStrip1.Size = new System.Drawing.Size(1403, 42);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -161,11 +165,15 @@
             this.TextLength.Size = new System.Drawing.Size(112, 32);
             this.TextLength.Text = "길이: 0자";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1407, 820);
+            this.ClientSize = new System.Drawing.Size(1403, 802);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
