@@ -35,7 +35,12 @@
             this.편집ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.복사ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -47,7 +52,7 @@
             this.편집ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1407, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(1407, 40);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,7 +82,7 @@
             this.편집ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.복사ToolStripMenuItem});
             this.편집ToolStripMenuItem.Name = "편집ToolStripMenuItem";
-            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 44);
+            this.편집ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.편집ToolStripMenuItem.Text = "편집";
             // 
             // 복사ToolStripMenuItem
@@ -85,27 +90,69 @@
             this.복사ToolStripMenuItem.Name = "복사ToolStripMenuItem";
             this.복사ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.복사ToolStripMenuItem.Text = "찾기";
+            this.복사ToolStripMenuItem.Click += new System.EventHandler(this.찾기ToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(0, 48);
+            this.richTextBox1.Location = new System.Drawing.Point(0, 40);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1407, 772);
+            this.richTextBox1.Size = new System.Drawing.Size(1407, 780);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(845, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(550, 58);
+            this.panel1.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("굴림", 10F);
+            this.textBox1.Location = new System.Drawing.Point(14, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(367, 38);
+            this.textBox1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(387, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 38);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "찾기";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(478, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 38);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 820);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "TextEditor";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +166,10 @@
         private System.Windows.Forms.ToolStripMenuItem 편집ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 복사ToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
