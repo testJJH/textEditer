@@ -38,5 +38,26 @@ namespace textEditer
             }
 
         }
+
+        private void 열기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = @"C:\";
+            openFileDialog1.Filter = "텍스트 파일(*.txt)|*.txt|모든 파일(*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    textBox1.Text = File.ReadAllText(openFileDialog1.FileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                finally { }
+            }
+
+        }
     }
 }
