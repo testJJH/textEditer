@@ -57,5 +57,19 @@ namespace textEditer
                 isDarkMode = true;
             }
         }
+
+        private void richTextBox1_SelectionChanged(object sender, EventArgs e)
+        {
+            int line = richTextBox1.GetLineFromCharIndex(richTextBox1.SelectionStart) + 1; // 현재 줄 (1부터 시작)
+            int column = richTextBox1.SelectionStart - richTextBox1.GetFirstCharIndexOfCurrentLine() + 1; // 현재 열 (1부터 시작)
+
+            CursorPoint.Text = $"줄: {line}, 열: {column}";
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            int length = richTextBox1.TextLength; // 텍스트 총 길이
+            TextLength.Text = $"길이: {length}자";
+        }
     }
 }
