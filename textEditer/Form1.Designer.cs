@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.저장ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,24 +36,12 @@
             this.복사ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.붙여넣기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.속성ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
-=======
             this.글꼴ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
->>>>>>> cf3fd6c (commit10 : add FontChange)
+            this.다크모드ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("굴림", 12F);
-            this.textBox1.Location = new System.Drawing.Point(0, 48);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(1407, 772);
-            this.textBox1.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -114,13 +101,9 @@
             // 
             // 속성ToolStripMenuItem
             // 
-<<<<<<< HEAD
-            this.속성ToolStripMenuItem.Name = "속성ToolStripMenuItem";
-            this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 36);
-            this.속성ToolStripMenuItem.Text = "속성";
-=======
             this.속성ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.글꼴ToolStripMenuItem});
+            this.글꼴ToolStripMenuItem,
+            this.다크모드ToolStripMenuItem});
             this.속성ToolStripMenuItem.Name = "속성ToolStripMenuItem";
             this.속성ToolStripMenuItem.Size = new System.Drawing.Size(82, 38);
             this.속성ToolStripMenuItem.Text = "속성";
@@ -131,14 +114,29 @@
             this.글꼴ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
             this.글꼴ToolStripMenuItem.Text = "글꼴";
             this.글꼴ToolStripMenuItem.Click += new System.EventHandler(this.글꼴ToolStripMenuItem_Click);
->>>>>>> cf3fd6c (commit10 : add FontChange)
+            // 
+            // 다크모드ToolStripMenuItem
+            // 
+            this.다크모드ToolStripMenuItem.Name = "다크모드ToolStripMenuItem";
+            this.다크모드ToolStripMenuItem.Size = new System.Drawing.Size(359, 44);
+            this.다크모드ToolStripMenuItem.Text = "다크모드";
+            this.다크모드ToolStripMenuItem.Click += new System.EventHandler(this.다크모드ToolStripMenuItem_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(0, 48);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(1407, 772);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 820);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "TextEditor";
@@ -150,8 +148,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 저장ToolStripMenuItem;
@@ -160,11 +156,10 @@
         private System.Windows.Forms.ToolStripMenuItem 복사ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 붙여넣기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 속성ToolStripMenuItem;
-<<<<<<< HEAD
-=======
         private System.Windows.Forms.ToolStripMenuItem 글꼴ToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
->>>>>>> cf3fd6c (commit10 : add FontChange)
+        private System.Windows.Forms.ToolStripMenuItem 다크모드ToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
